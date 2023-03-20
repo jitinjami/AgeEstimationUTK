@@ -37,11 +37,15 @@ def main():
     #Input image directory, usually "UTK"
     image_dir = Path(os.getcwd()+ "/" + args.input)
 
+    image_dir.makedirs(parents=True, exist_ok=True)
+
     if not os.path.exists(image_dir):
         sys.exit("Image input directory doesn't exist")
 
     #Output image directory, usually "UTK_db"
     output_path = Path(os.getcwd()+ "/" + args.output)
+
+    output_path.makedirs(parents=True, exist_ok=True)
 
     if not os.path.exists(output_path):
         sys.exit("Output directory doesn't exist")
