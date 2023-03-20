@@ -1,0 +1,14 @@
+#For downloading the UTK dataset
+python3 data_download_UTK.py
+
+#For Creating database
+python3 create_utk_dataset.py
+
+#For training
+python3 train.py
+
+#For testing
+python3 test.py --resume /home/jami/age_UTK/checkpoint/epoch004_0.02587_6.0225.pth
+
+#For demo
+python3 demo.py --resume /home/jami/age_UTK/checkpoint/epoch004_0.02587_6.0225.pth --img_dir /home/jami/age_UTK/test/ --output_dir /home/jami/age_UTK/test_results/ --margin 0
