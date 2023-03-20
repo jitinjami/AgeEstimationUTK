@@ -37,8 +37,6 @@ def main():
     #Input image directory, usually "UTK"
     image_dir = Path(os.getcwd()+ "/" + args.input)
 
-    image_dir.makedirs(parents=True, exist_ok=True)
-
     if not os.path.exists(image_dir):
         sys.exit("Image input directory doesn't exist")
 
